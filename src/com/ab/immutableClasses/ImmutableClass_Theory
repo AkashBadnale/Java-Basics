@@ -1,0 +1,16 @@
+Immutable classes – 
+
+NOTE -    String  &  all  wrapper  classes are by default immutable in nature .  
+whenever you try /  modify  String or wrapper classes the original object never modifies , 
+they ( String & Wrapper classes )  create a new  instance for the new modification . And so they are immutable in nature . 
+
+Why  to use ?
+To  create a application safe to use in multithreaded environment  the concept of immutable classes can be used . 
+With the help of immutable classes  objects  will be never modified .  every modification in a object will create a new instance ,  and hence each thread would use a different  instance  And so we don’t have to worry about the  concurrent modifications 
+
+
+How to make a  class immutable ?
+1.	Make  your  class final ,  so it cant be extended . and final classes can not be overridden 
+2.	Make all your fields private , final so they can not be modified once they are  declared/initialized 
+3.	Remove setter methods . And make them private too so that they can not accessed directly .
+4.	Make constructor as private .
