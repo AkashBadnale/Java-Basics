@@ -13,4 +13,4 @@ How to make a  class immutable ?
 1.	Make  your  class final ,  so it cant be extended . and final classes can not be overridden 
 2.	Make all your fields private , final so they can not be modified once they are  declared/initialized 
 3.	Remove setter methods . And make them private too so that they can not accessed directly .
-4.	Make constructor as private .
+4.	Make constructor as private . And to access constructor use another method to create new object each time 
