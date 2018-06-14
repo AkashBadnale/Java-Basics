@@ -1,0 +1,23 @@
+Factory Pattern  --  The Factory Method Pattern is also known as Virtual Constructor.
+
+1.where you have a set of component classes but won’t know exactly which one you’ll need to instantiate until runtime.                                                                                                                                                                             
+2. Factory design pattern is used to create objects                                                                                                                
+3. Factory pattern encapsulate object creation logic which makes it easy to change it later when you change how object gets created or you can even introduce new object with just change in one class.
+
+examples of static factory methods in JDK -  valueOf () method in String & Wrapper classes  .  getInstance () ,  newInstance () etc.,
+
+Problem solved by factory method ?
+1. Some time our application or framework will not know that what kind of object it has to create at run-time it knows only the interface or  abstract class and as we know we can not create object of interface or abstract class so main problem is frame work knows when it has to create but don’t know what kind of object.
+2. Another problem we can face is class needs to contain objects of other classes or class hierarchies within it; this can be very easily achieved  by just using the new keyword and the class constructor. The problem with this approach is that it is a very hard coded approach to create objects as this creates dependency between the two classes.
+ So factory pattern solve this problem very easily by model an interface for creating an object which at creation time can let its subclasses decide which class to instantiate
+
+When to use factory design pattern ?
+1. when Products don't need to know how they are created
+2. when we have to create an object of any one of sub-classes depending on the data provided
+
+Advantage of Factory Pattern in java ?
+1 .  Factory method design pattern decouples the calling class from the target class, which result in less coupled and highly cohesive code?
+E.g.: JDBC is a good example for this pattern; application code doesn't need to know what database it will be used with, so it doesn't know  what database-specific driver classes it should use. Instead, it uses factory methods to get Connections, Statements, and other objects to work with.
+2. Another benefit of using Factory design pattern in Java is that it encourages consistency in Code since every time object is created using Factory  rather than using different constructor at different client side.
+3. Code written using Factory design pattern in Java is also easy to debug and troubleshoot because you have a centralized method for object creation  and every client is getting object from same place.
+4.Factory pattern can also be used to hide information related to creation of object.                                                                                       5.Factory method pattern offers alternative way of creating object.
